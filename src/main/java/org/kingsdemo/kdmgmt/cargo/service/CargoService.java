@@ -24,8 +24,9 @@ public class CargoService {
 		return cargos;
 	}
 	
-	public void insertCargo(Cargo cargo) {
-		cargoRepository.save(cargo);
+	public Long insertCargo(Cargo cargo) {
+		Cargo c = cargoRepository.save(cargo);
+		return c.getId();
 	}
 	
 	public void deleteCargo(Long id) {

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<form method="post">
+		<table>
+			<tr>
+				<td>描述</td>
+				<td><textarea name="description" cols="40" rows="5"></textarea></td>
+			</tr>
+			
+			<tr>
+				<td>季节</td>
+				<td>
+					<select name="category">
+						<option value="SPRING">春</option>
+						<option value="SUMMER">夏</option>
+						<option value="AUTUMN">秋</option>
+						<option value="WINTER">冬</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>价格</td>
+				<td><input type="text" name="price"></input></td>
+			</tr>
+			
+			<tr>
+				<td>图片</td>
+				<td><input type="file" name="file" /></td>
+			</tr>
+		</table>
+		<button type="submit">Create</button>
+	</form>
+
+</body>
+</html>

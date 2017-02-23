@@ -7,14 +7,20 @@ import javax.persistence.Id;
 
 @Entity
 public class Cargo {
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private long id;
+	private String description;
+	private float price;
+	private String category;
+	
 	public Cargo() {
 	}
 	
-	public Cargo(String description, long id, float price, String imgURL) {
+	public Cargo(String description, long id, float price, String category) {
 		this.description = description;
 		this.id = id;
 		this.price = price;
-		this.imgURL = imgURL;
+		this.category = category;
 	}
 	
 	/**
@@ -53,22 +59,12 @@ public class Cargo {
 	public void setPrice(float price) {
 		this.price = price;
 	}
-	/**
-	 * @return the imgURL
-	 */
-	public String getImgURL() {
-		return imgURL;
-	}
-	/**
-	 * @param imgURL the imgURL to set
-	 */
-	public void setImgURL(String imgURL) {
-		this.imgURL = imgURL;
-	}
 	
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
-	private String description;
-	private float price;
-	private String imgURL;
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
 }

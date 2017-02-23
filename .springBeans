@@ -9,6 +9,7 @@
 	<configs>
 	</configs>
 	<autoconfigs>
+		<config>java:org.kingsdemo.kdmgmt.KdMgmtApp</config>
 	</autoconfigs>
 	<configSets>
 	</configSets>

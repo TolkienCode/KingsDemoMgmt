@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Home Page</title>
+<link rel="stylesheet" href="../static/bootstrap.css" />
+</head>
+<body>
+<h1 th:text="${message}"></h1>
+
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>价格</th>
+        <th>季节</th>
+        <th>描述</th>
+      </tr>
+      <tr th:each="cargo : ${cargos}">
+        <td th:text="${cargo.id}">-</td>
+        <td th:text="${cargo.price}">-</td>
+        <td th:text="${cargo.category}">-</td>
+        <td th:text="${cargo.description}">-</td>
+      </tr>
+    </table>
+
+</body>
+</html>
